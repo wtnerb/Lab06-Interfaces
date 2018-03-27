@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab06_interfaces
+namespace Lab06
 {
-    class Program
+    interface ISpellcaster
     {
-        static void Main(string[] args)
-        {
-        }
+        string UseMagic();
     }
 }

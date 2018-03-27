@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2340B5AA-F733-4AE3-B415-EFB5220D98C7}</ProjectGuid>
+    <ProjectGuid>{472F4EE4-0AA5-4B1D-B025-E550052510E4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>lab06_interfaces</RootNamespace>
-    <AssemblyName>lab06-interfaces</AssemblyName>
+    <RootNamespace>Lab06</RootNamespace>
+    <AssemblyName>Lab06</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,8 +42,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
+    <Compile Include="Cerebus.cs" />
+    <Compile Include="DevilsSnare.cs" />
+    <Compile Include="Dragon.cs" />
+    <Compile Include="Ent.cs" />
+    <Compile Include="Hydra.cs" />
+    <Compile Include="ISpellcaster.cs" />
+    <Compile Include="Lich.cs" />
+    <Compile Include="Living.cs" />
+    <Compile Include="Lizard.cs" />
+    <Compile Include="Mammal.cs" />
+    <Compile Include="NotExist.cs" />
+    <Compile Include="Plant.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sentient Undead.cs" />
+    <Compile Include="ISpeak.cs" />
+    <Compile Include="Undead.cs" />
+    <Compile Include="Vampire.cs" />
+    <Compile Include="Zombie.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
