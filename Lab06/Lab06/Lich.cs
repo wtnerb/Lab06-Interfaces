@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab06
 {
-    public class Lich : Sentient_Undead, ISpeak, ISpellcaster
+    public class Lich : Sentient_Undead, ISpellcaster
     {
         public override string Source()
         {
@@ -18,7 +18,7 @@ namespace Lab06
         public override string[] SlainBy { get; set; } = { "Phylactery destruction" };
 
         public override string Name { get; set; }
-        public string Speak()
+        public override string Speak()
         {
             return "Death is an obstacle. Fail to overcome it and face oblivion.";
         }

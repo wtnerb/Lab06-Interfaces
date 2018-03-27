@@ -57,6 +57,16 @@ namespace AnimalTesting
         }
 
         [Fact]
+        public void CanMakeXykon()
+        {
+            Lich xykon = new Lich("Xykon");
+            Assert.Equal("Xykon", xykon.Name);
+            Assert.Equal("Death is an obstacle. Fail to overcome it and face oblivion.", xykon.Speak());
+            Assert.Equal("Avada Kedavra", xykon.UseMagic());
+            Assert.Equal("null", xykon.Sustenance());
+        }
+
+        [Fact]
         public void CanMakeHydra()
         {
             Hydra hydra = new Hydra();

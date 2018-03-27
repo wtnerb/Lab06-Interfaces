@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab06
 {
-    public class Vampire : Sentient_Undead, ISpeak
+    public class Vampire : Sentient_Undead
     {
         public override string[] Weaknesses { get; set; } = { "garlic", "sunlight", "holy symbols" };
         public override string Name { get; set; }
@@ -22,7 +22,7 @@ namespace Lab06
             return "Dracula (1897) by Bram Stoker";
         }
         public override string[] SlainBy { get; set; } = { "wooden stake", "fire", "sunlight" };
-        public string Speak()
+        public override string Speak()
         {
             return "I vant to drink your blood";
         }

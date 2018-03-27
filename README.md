@@ -3,7 +3,7 @@
 This is the same zoo as before, now with the addition of interfaces. In particular, the ISpeak and ISpellcaster interfaces now force some disparate species far apart in the inheritance tree to share behavior.
 
 ## Use
-This application does not have much practical purpose.
+This application is an instructive exercise with no practical purpose. The purpose was to use classes and inheritance to build a zoo of animals in a manner similar to biological classification of animals. Then, once the zoo was built, add at least two interfaces.
 
 ## Architecture
 The design of this lab is a class inheritance tree. An outline is in the picture below.
@@ -20,6 +20,12 @@ list of concrete species classes that can be instantiated
 - Lich
 - Vampire
 - Zombie
+
+## Interfaces
+There are two interfaces used: ISpeak and ISpellcaster. These interfaces connect behaviors of classes very disparate on the inheritance heirarchy.
+
+- ISpeak is applied to Sentient_Undead, Dragon, and Ent. It requires there to be a Speak method.
+- ISpellcaster is applied to Dragon and Lich. It requires those classes to have a UseMagic method.
 
 ## Sources
 Wikipedia provided information especially about dates of origin for mythological origin of the species.
