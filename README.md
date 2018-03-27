@@ -1,74 +1,32 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Lab 6 : Interfaces
-=====================================
+# zoo with interfaces
+## Overview
+This is the same zoo as before, now with the addition of interfaces. In particular, the ISpeak and ISpellcaster interfaces now force some disparate species far apart in the inheritance tree to share behavior.
 
-## To Submit this Assignment
-- fork this repository
-- create a new branch named `lab01-`; + `<your name>` **e.g.** `lab06-amanda`
-- write your code
-- push to your repository
-- submit a pull request to this repository
-- submit a link to your PR in canvas
-- Include a Readme.md (contents described below)
+## Use
+This application is an instructive exercise with no practical purpose. The purpose was to use classes and inheritance to build a zoo of animals in a manner similar to biological classification of animals. Then, once the zoo was built, add at least two interfaces.
 
-## Directions
-Building off of your lab05, add interfaces to both the diagram and the codebase. 
-1. Create a minimum of 2 interfaces.
-	- Each interface created should be implemented by more than one class.
-	- Have at least one class implementing more than one interface
-	- Have at least one method for each of the interfaces that requires anything of that interface type be accepted.
-- Test your code with Unit testing
-- Update your diagram with the new interfaces
-- Label interfaces as `<interface>`
-- Define in your readme, What your interfaces are, where are they being implemented, and why. 
+## Architecture
+The design of this lab is a class inheritance tree. An outline is in the picture below.
+![class inhertance tree picture](Lab06/ZooOutlineInterfaces.png)
+As you can see, the base class is imaginary (NotExist in the actual code.) The other classes descend from that one base class. In particular, the important way today's work is different from yesterday's is the addition of interfaces. Dragons, Liches, Vampires, and Ents all have the ability to speak in most mythological references, so they gain the ISpeak interface. This requires all of those classes to contain a string Speak() method. Additionally, in mythology dragons and liches frequently are powerful magic users so they both are given the ISpellcaster interface, requiring that the developer give both classes a string UseMagic method. All of those new methods and interfaces do get tested.
 
-- **You may need to create new classes that takes in the interface arguement to prove your animal implements the Interface correctly.**
+#### Species
+list of concrete species classes that can be instantiated
+- Dragon
+- Ent
+- Cerberus
+- Devil's Snare
+- Hydra
+- Lich
+- Vampire
+- Zombie
 
-```
-class Ocean{
-	public void Swim(ISwim fish)
-	{
-		Console.WriteLine($"This {fish.Name} can swim!");
-	}
-}
-```
+## Interfaces
+There are two interfaces used: ISpeak and ISpellcaster. These interfaces connect behaviors of classes very disparate on the inheritance heirarchy.
 
-## ReadMe
-A README is a module consumer's first -- and maybe only -- look into your creation. The consumer wants a module to fulfill their need, so you must explain exactly what need your module fills, and how effectively it does so.
-<br />
-Your job is to
+- ISpeak is applied to Sentient_Undead, Dragon, and Ent. It requires there to be a Speak method.
+- ISpellcaster is applied to Dragon and Lich. It requires those classes to have a UseMagic method.
 
-1. tell them what it is (with context)
-2. show them what it looks like in action
-3. show them how they use it
-4. tell them any other relevant details
-
-<br />
-
-This is ***your*** job. It's up to the module creator to prove that their work is a shining gem in the sea of slipshod modules. Since so many developers' eyes will find their way to your README before anything else, quality here is your public-facing measure of your work.
-
-<br /> <br /> Refer to the sample-README in the class repo for an example. 
-- [Reference](https://github.com/noffle/art-of-readme)
-
-## Rubric
-- 7pts: Program meets all requirements described in Lab directions
-
-	Points  | Reasoning | 
-	 ------------ | :-----------: | 
-	7       | Program runs as expected, no exceptions during execution // Documentation,OOP, and interface implemenation exactly as required |
-	5       | Program runs/compiles, Some implementation errors with OOP principles and interface // Diagram shows some implementation errors|
-	4       | Program runs/compiles // Digital Diagram missing approx. half of the required labels // Improper use of OOP principles and interfaces |
-	2       | Missing tests // tests are not passing // not enough valid tests |
-	2       | Missing Readme Document // Readme Document does not meet standards |
-	0       | Program does not compile/run. Build Errors. |
-	0       | No Submission |
-
-- 3pts: Code meets industry standards
-	- These points are only awardable if you score at minimum a 5/7 on above criteria
-
-	Points  | Reasoning | 
-	 ------------ | :-----------: | 
-	3       | Code meets Industry Standards // methods and variables namings are appropriate // Selective and iterative statements are used appropriately, Fundamentals are propertly executed // Clearly and cleanly commented |
-	2       | syntax for naming conventions are not correct (camelCasing and PascalCasing are used appropriately) // slight errors in use of fundamentals // Missing some comments |
-	1       | Inappropriate naming conventions, and/or inappropriate use of fundamentals // Code is not commented  |
-	0       | No Submission or incomplete submission |
-
+## Sources
+Wikipedia provided information especially about dates of origin for mythological origin of the species.
+Choices made about which mythological source is the origin of Dragon or Zombie or Hydra were sometimes fairly arbitrary and subjective opinions of the developer, not objective fact.
