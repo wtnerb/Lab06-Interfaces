@@ -14,6 +14,7 @@ namespace AnimalTesting
             Assert.Equal("Blood", dracula.Sustenance());
             Assert.True(dracula.Base == "Human");
             Assert.False(dracula.Exists);
+            Assert.Equal("I vant to drink your blood", dracula.Speak());
         }
 
         [Fact]
@@ -24,6 +25,8 @@ namespace AnimalTesting
             Assert.Equal("Fly", smaug.Locomotion());
             Assert.False(smaug.Exists);
             Assert.Equal("Crispify that!", smaug.BreathFire());
+            Assert.Equal("I am a dragon. Fear my teeth, claws, fire and cunning", smaug.Speak());
+            Assert.Equal("You are feeling very sleepy. Sleep, mortal, and never awaken.", smaug.UseMagic());
         }
 
         [Fact]
@@ -32,6 +35,7 @@ namespace AnimalTesting
             Ent treebeard = new Ent();
             Assert.Equal("Sunlight", treebeard.Sustenance());
             Assert.Equal("Lord of the Rings: The Two Towers (1954) by J.R.R. Tolkien", treebeard.Source());
+            Assert.Equal("Where have all the Entwives gone?", treebeard.Speak());
         }
 
         [Fact]
