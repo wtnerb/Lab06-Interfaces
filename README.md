@@ -24,9 +24,15 @@ list of concrete species classes that can be instantiated
 ## Interfaces
 There are two interfaces used: ISpeak and ISpellcaster. These interfaces connect behaviors of classes very disparate on the inheritance heirarchy.
 
-- ISpeak is applied to Sentient_Undead, Dragon, and Ent. It requires there to be a Speak method.
-- ISpellcaster is applied to Dragon and Lich. It requires those classes to have a UseMagic method.
+- ISpeak is applied to Sentient_Undead, Dragon, and Ent. It requires there to be a Speak method that returns a string.
+- ISpellcaster is applied to Dragon and Lich. It requires those classes to have a UseMagic method that returns a string.
+
+Note: in both cases, the method returns a string. In order to actually do something useful with that information, another method has to be implemented. As an example, in the Program class their are two methods that accept an ISpeak/ISpellcaster and print out the result of the required methods to the console. This is an example of how to work with interfaces.
 
 ## Sources
 Wikipedia provided information especially about dates of origin for mythological origin of the species.
 Choices made about which mythological source is the origin of Dragon or Zombie or Hydra were sometimes fairly arbitrary and subjective opinions of the developer, not objective fact.
+
+## version
+2018-03-27 v1.0 Built off of zoo project with Interfaces implemented
+2018-04-06 v1.1 Added methods that require interfaces and printed things to the console
